@@ -1618,7 +1618,8 @@ async function loadFromGoogleSheets() {
     renderRosterCards();
 
     // ── Contador total de jugadores (plantillas) ──
-    const total = plantillaF.length + plantillaM.length + plantillaI.length;
+    const total = plantillaF.length + plantillaM.length + plantillaI.length
+            + femalePlayers.length + malePlayers.length + infantilPlayers.length;
     document.querySelectorAll('[data-count-players]').forEach(el => {
       el.setAttribute('data-count', total);
       animateCounter(el);
