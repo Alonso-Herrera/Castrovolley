@@ -1534,7 +1534,6 @@ async function fetchSheet(sheetName) {
 async function getSheetData(sheetName) {
   const json = await fetchSheet(sheetName);
   return (json.table.rows || [])
-    .slice(1)                               // omitir fila de encabezados
     .map((row, idx) => ({
       rowNum  : idx + 1,
       shirt   : row.c[1]?.v ?? '',
